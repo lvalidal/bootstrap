@@ -9,6 +9,11 @@
 
 $green : mediumspringgreen ;
 
+@mixin boyut {
+    width: 100% ;
+   
+}
+
 header {
 
     display: flex;
@@ -64,7 +69,7 @@ header {
 
     .still{
     border: 0px solid ;
-    width: 100%;
+    @include boyut ;
     height: 80vh;
     position: relative;
     object-fit: cover;
@@ -75,7 +80,7 @@ header {
 
 img {
 
-    width: 100%;
+    @include boyut
 
 }
 
@@ -143,7 +148,7 @@ h1{
 
         object-fit: cover;
         overflow: hidden;
-        width: 100%;
+        @include boyut;
     }
 }
 
@@ -194,7 +199,7 @@ h1{
     display: flex;
     justify-content: space-around;
     border: 0px solid;
-    width: 100%;
+    @include boyut;
     height: 300px;
     
 
@@ -371,7 +376,7 @@ h1{
 .card-img-top{
     img{
 
-        width: 100%;
+       @include boyut;
         overflow: hidden;
     }
 }
@@ -461,3 +466,4 @@ h1{
 
 
 
+// mixin width harada 100%dirse onun ucun verdim, grid sadece bir section ucun yazmaq vaxtim oldu. kodlarin hamisini evvelce mainde yazib sonra yerlesdirmek istedim amma oraya import etmeye calisanda problem cixdi nese duzgun islemedi. burada da bir az qarisiq oldu uzrlu sayin amma yadima dusen ne var idise etmeye calisdim. unutdugum basqa bir sey varsa uzrlu sayin diqqetimden qacmis ola biler
